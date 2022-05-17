@@ -1,0 +1,13 @@
+// value semantics says that a piece of code is copied as it moves around your program
+// every piece of program that operates on data uses its own copy of the data
+
+// pointer semantics says we're not copying data as we move it across our program
+// there's one copy, and it will be shared by everybody
+
+// when we're working with value semantics, we can actually achieve higher levels of integrity in our software
+// mutation of memory causes high level of bugs in programs
+
+// when everybody works on own copy, it's easier to copy
+// extra complexity in code is cost of value semantics
+
+// when to use values over pointers? will learn later
