@@ -1,0 +1,16 @@
+strings are complex.
+In go, strings end up being 2 word data structure
+
+-----------
+- pointer -
+- ------- -
+-    0    -
+-----------
+
+hello ends up being a multipart data structure.
+
+-----------
+- pointer - -----> [h | e | l | l | o]
+- ------- -
+-    5    - -----> bytes in string
+-----------
