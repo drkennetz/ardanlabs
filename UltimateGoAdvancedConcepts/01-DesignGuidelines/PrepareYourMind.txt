@@ -1,0 +1,33 @@
+Notes:
+- if you don't agree with the engineering decisions of a language, you probably shouldn't code in that language because you'll just be frustrated.
+
+Somewhere along the line:
+ - we became impressed with programs that have large amounts of code
+   - linux kernel has 25,000,000 lines of code - that's a lot
+ - go is trying to reduce the lines of code
+ - we strived to create large abstractions in our code base
+   - we want to focus on thin layers of decoupling
+   - they should be precise
+ - we forgot that the hardware is the platform
+   - go's model is the hardware
+   - mechanical sympathy is the fact that the hardware is the platform
+ - we lost the understanding that every decision comes with a cost
+   - engineering is about understanding the cost you're taking with the decisions you're making
+   - if you're not considering the cost, you're not engineering, you're hacking
+   - we don't really know what we're doing, we just need to get something done
+   - the problem isn't hacking, it is that we don't go back through. This should not be where it ends
+
+Who am I as a software developer, what are my design philosophies, do I agree with what go is saying and doing?
+ - Technology changes quickly, but peoples' minds change slowly
+   - try to change your mind to move towards the engineering around go
+   - it's easy to adopt new tech, it's hard to adopt a new mindset
+ - we ask people to learn how to write before we teach them how to read
+ - reading allows us to be better writers
+ - I want every developer to have this quote in front of them
+   - "If most computer people lack understanding and knowledge, then what they will select will also be lacking." - Alan Kay
+ - Maintaining mental models enables maintaining code
+ - the average dev cannot maintain more of a mental model of more than 10k lines of code
+ - don't depend on debugger to find problems
+ - debuggers don't remove bugs, they just run them in slow motion
+
+

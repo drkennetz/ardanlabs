@@ -1,0 +1,15 @@
+Correctness vs Performance
+- If you are thinking about performance, you are guessing
+- go has enough tooling to ensure that we don't have to guess about anything
+- we want to focus on correctness because we don't have to guess
+- integrity, readability, simplicity - refactoring
+- after it is correct, we can determine if it is fast enough using tools
+- "Make it correct, make it concise, make it clear, then make it fast."
+- hacking is when we are not thinking about cost
+- if I were to write a blog post, I would have someone review my first draft.
+- "Hey Bill, this isn't perfect - remember that when you read it"
+- we draft code, we revise it, we refactor it.
+- If we can rid the need to be perfect and draft, then we can write more correct code.
+- we build things to get the job done. I am a backend developer
+- "I build air conditioners. Have you thought about the AC in the past hour? No. If that thing shuts down, you won't be able to pay attention to a word I say, all you'll think about is how fast is someone coming to fix it."
+- That's what I build - robust systems that work in the background so that run day in and day out so that nobody knows who I am. If someone knows who I am, there's likely a problem.

@@ -1,0 +1,9 @@
+Productivity vs Performance
+ - is performance important? is it your priority?
+ - productivity matters more than performance - look at all modern languages
+ - Go has given us a language where we can maintain a high level of productivity and be performant
+ - Can I write a go program that is fast enough?
+
+ "The hardware folks will not put more cores into their hardware if the software isn't going to use them, so, it is this balancing act of each other staring at each other, and we are hoping that Go is going to break through on the software side" - Rick Hudson
+ - you should be able to predict reasonably well, what the mental model is. What is going on in the machine, and how performant it is going to be, should be apparent from the code.
+
