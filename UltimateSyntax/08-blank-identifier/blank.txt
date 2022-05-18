@@ -1,0 +1,10 @@
+the blank identifier "_" is used when you don't want to capture a return. For example:
+
+val, _ := strconv.Atoi("10")
+
+this package returns a value and an error.
+- val will be "10" converted to an int32 -> 10
+- _ would be the error, but I have thrown it away.
+- generally we want to check errors, but this is just an example.
+- if we assign this to a variable in our program and don't check it, the compiler will complain that a value has been assigned to a variable that isn't being used.
+
