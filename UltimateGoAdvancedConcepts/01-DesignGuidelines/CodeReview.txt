@@ -1,0 +1,40 @@
+Code Review
+
+Integrity is about becoming serious behind reliability
+ - micro
+ - macro
+
+Code:
+ 1. Allocates memory
+ 2. Reads that memory
+ 3. writes to that memory
+
+Integrity:
+ - we need to become very serious about reliability
+ - There are two driving forces behind integrity
+  1. Integrity is about every allocation, read and write of memory being accurate, consistent and efficient.
+   - The type system is critical to making sure we have this micro level of integrity
+   - Macro level integrity is always a data problem
+   - Go is a data oriented design language
+   - data comes in, we transform it, it goes out
+  2. Integrity is about every data transformation being accurate, consistent and efficient.
+     Writing less code and error handling is critical to making sure we have this macro level of integrity.
+  - we have to worry about when code is running bad, not when it is running code.
+  - The bulk of what we do in engineering is geared towards failure, not success.
+  - we are trying to prevent, or catch failures.
+  "Failure is expected, failure is not an odd case. Design systems that help you identify failure.
+  Design systems that can recover from failure." - JBD
+
+Readability
+ - subjective part of readability - everybody on the team should be able to read
+ - do not hide the cost of the code
+ - we want to look at a line of code, and know what it is going to do.
+ - the average developer should have a full mental model of the code base
+ - am I above average, average, or below average on my team?
+ - for bioinformatics, I'm above average. For web dev, I'm below average
+ - when the problems show up, how hard are they to fix?
+
+Simplicity
+ - simplicity is about hiding complexity without losing readability
+ - simplicity is achieved through refactoring
+ - you don't have time not to do this refactoring

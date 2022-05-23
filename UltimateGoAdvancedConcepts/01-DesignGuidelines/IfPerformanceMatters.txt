@@ -1,0 +1,16 @@
+If Performance Matters
+
+4 tops reasons as to why your software isn't running as fast as it should be:
+ 1. External latencies
+   - system calls
+   - waiting on things on the network
+   - milliseconds of time
+   - microservices occur milliseconds of latency
+ 2. Internal latency costs
+   - garbage collector
+   - synchronization and orchestration
+ 3. Access data on the machine
+   - access and store affects how performant we are
+ 4. Algorithmic efficiency
+   - not going to hurt us unless we are in tight loops
+   - readability over algorithmic efficiency if it doesn't kill our code
