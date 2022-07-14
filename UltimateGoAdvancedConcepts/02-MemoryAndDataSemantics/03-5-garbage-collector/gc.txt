@@ -1,0 +1,52 @@
+All collectors have the same job.
+ - they walk through the heap, find items that are no longer allocated, and sweep that memory free so it can be reused
+ - we have a concurrent collector - so we should be able to work at the same time
+ - mark and sweep collector
+
+Pacer:
+ - pacer figures out:
+   - when to start a collection
+   - how long that collection is going to take
+   - start the collection at the very last moment, yet still finish in time before we run out of heap
+ - we should also know how much pressure we are putting on the heap
+
+Let's take an example. The pacer just finished a garbage collection, and we end up with 2 megs of memory in use:
+
+------------
+2 meg in use
+------------
+
+GC% = 100% - this is a configuration : GOGC
+ - we aren't going to play with this, because the GC is very well tuned with this number
+ - basically, what this 100% number means, is that if we have this 2 meg heap, we will size this entire allocation to 4meg
+ - we will call this a 2 meg gap:
+
+Mental model:
+-------------
+2 meg gap
+-------------
+2 meg in use
+-------------
+
+4 meg heap total
+
+If we had 3 meg in use, then we'd have 3 meg gap, and 6 meg heap
+The question to ask is, how quickly does it take to fill that gap?
+The faster that the gap is filled, the more frequently the GC has to run, which is inefficient.
+
+#2 on Bill's all time list of inefficiencies is internal latencies.
+ - The garbage collector is a big part of those internal latencies.
+ - Can we minimize the STW (Stop The World) time to < 100us
+
+Few points of STW during garbage collection:
+ 1. Having to bring all current running goroutines to that STW point
+   - you have to turn the write barrier on
+   - Imagine the following scenario:
+     4 logical processors:
+      m   m   m   m
+      |   |   |   |
+     [P] [P] [P] [P]
+     ||| ||| ||| |||
+     STW STW STW STW
+   - we have many goroutines running, and several waiting to run.
+   - 10-30us to stop all these goroutines to maintain the integrity of the program.
